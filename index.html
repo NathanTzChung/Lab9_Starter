@@ -103,6 +103,39 @@
     // Start your code here
     // You may move this JS to another file if you wish
 
+    // Try, catch on site load
+    try {
+      alert("On site load, show this try message");
+      if (confirm("Did you drink water today?")){
+      
+      } else {
+        notAVariable;
+      };
+    } catch (err) {
+      alert("Caught ya clicking cancel");
+    } finally {
+      alert("Still, go drink some water");
+    }
+
+    class someError extends Error {
+      constructor(message) {
+        super(message);
+        this.name = "SomeError";
+      }
+    }
+
+    function errorDisplay(truthValue) {
+      if (truthValue == true) {
+        throw new someError("Some error has occurred, yeah this notif isn't helpful");
+      }
+    }
+
+    try {
+      let truthValue = errorDisplay(true);
+    } catch (err) {
+      alert("Woops, some error: " + err.message);
+    }
+
     // All buttons
     let allConsoleBtns = document.querySelectorAll('button');
 
