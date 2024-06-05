@@ -47,6 +47,14 @@
       width: 122px;
     }
   </style>
+
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS && TrackJS.install({ 
+      token: "ea7595bb24a145c2930fa346a3cc53a1"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
 </head>
 
 <body>
@@ -87,14 +95,6 @@
       <button>Custom Trigger Try/Catch</button>
     </section>
   </main>
-
-  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-  <script>
-    window.TrackJS && TrackJS.install({ 
-      token: "ea7595bb24a145c2930fa346a3cc53a1"
-      // for more configuration options, see https://docs.trackjs.com
-    });
-  </script>
                         
   <script>
     let form = document.querySelector('form');
