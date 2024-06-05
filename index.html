@@ -102,6 +102,124 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+
+    // All buttons
+    let allConsoleBtns = document.querySelectorAll('button');
+
+    // Calculate button
+    let calculateButton = allConsoleBtns[0];
+    let firstNum = document.getElementById("first-num");
+    let secondNum = document.getElementById("second-num");
+    let operator = document.getElementById("operator").value;
+    let result = document.getElementById("output");
+    calculateButton.addEventListener('click', function() {
+      let output = "";
+      if (operator == '+') {
+        output = firstNum + secondNum;
+      } else if (operator == '-') {
+        output = firstNum - secondNum;
+      } else if (operator == '*') {
+        output = firstNum * secondNum;
+      } else {
+        output = firstNum / secondNum;
+      }
+      result = output;
+    })
+
+    // Console Log Button
+    let consoleLogBtn = allConsoleBtns[1];
+    consoleLogBtn.addEventListener('click', function() {
+      console.log("Clicked the console log button");
+    });
+
+    // Console Error Button
+    let consoleErrBtn = allConsoleBtns[2];
+    consoleErrBtn.addEventListener('click', function() {
+      console.error("Uh oh, console error");
+    })
+
+    // Console Count Button
+    let consoleCountBtn = allConsoleBtns[3];
+    consoleCountBtn.addEventListener('click', function() {
+      console.count("Count button");
+    })
+
+    // Console Warn Button
+    let consoleWarnBtn = allConsoleBtns[4];
+    consoleWarnBtn.addEventListener('click', function() {
+      console.warn("This is a warning, beware!");
+    })
+
+    // Console Assert Button
+    let consoleAssertBtn = allConsoleBtns[5];
+    consoleAssertBtn.addEventListener('click', function() {
+      let x = 3;
+      let y = 4;
+      console.assert(x + y == 6, "Error: The given values don't sum to 6.");
+    })
+
+    // Console Clear Button
+    let consoleClearBtn = allConsoleBtns[6];
+    consoleClearBtn.addEventListener('click', function() {
+      console.clear();
+    })
+
+    // Console Dir Button
+    let consoleDirBtn = allConsoleBtns[7];
+    consoleDirBtn.addEventListener('click', function() {
+      console.dir(this);
+    })
+
+    // Console Dirxml Button
+    let consoleDirXmlBtn = allConsoleBtns[8];
+    consoleDirXmlBtn.addEventListener('click', function() {
+      console.dirxml(this);
+    })
+
+    // Console Group Start Button
+    let consoleGrpStartBtn = allConsoleBtns[9];
+    consoleGrpStartBtn.addEventListener('click', function() {
+      console.group();
+    })
+
+    // Console Group End Button
+    let consoleGrpEndBtn = allConsoleBtns[10];
+    consoleGrpEndBtn.addEventListener('click', function() {
+      console.groupEnd();
+    })
+
+    // Console Table Button
+    let consoleTableBtn = allConsoleBtns[11];
+    consoleTableBtn.addEventListener('click', function() {
+      console.table(['Apple', 'Pears', 'Bonsai Tree', 'Cats']);
+    })
+
+    // Console Start Timer Button
+    let consoleStartTimerBtn = allConsoleBtns[12];
+    consoleStartTimerBtn.addEventListener('click', function() {
+      console.time();
+    })
+
+    // Console End Timer Button
+    let consoleEndTimerBtn = allConsoleBtns[13];
+    consoleEndTimerBtn.addEventListener('click', function() {
+      console.timeEnd();
+    })
+
+    // Console Trace Button
+    function beforeConsoleTrace () {
+      consoleTraceFunction();
+    }
+
+    function consoleTraceFunction() {
+      console.trace("The stack trace");
+    }
+
+    let consoleTraceBtn = allConsoleBtns[14];
+    consoleTraceBtn.addEventListener('click', function() {
+      beforeConsoleTrace();
+    })
+
   </script>
 </body>
 
